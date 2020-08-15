@@ -15,7 +15,7 @@ https://otexts.com/fpp3/regarima.html
 
 
 
-plot UL_L and UL_A log returns together
+plot UL_L and UL_A log returns on same plot
 
 write ARIMAX model for UL_A using UL_L 
 
