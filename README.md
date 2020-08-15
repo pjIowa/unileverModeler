@@ -1,6 +1,6 @@
 # Unilever Time Series Analysis
 
-Unilever dual-listing existence and motivation for exercise
+Unilever dual-listing existence, motivation for exercise, and data description
 
 plot UL_L and UL_A separately
 
