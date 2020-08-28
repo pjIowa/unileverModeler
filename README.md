@@ -3,6 +3,10 @@
 Unilever dual-listing existence, motivation for exercise, and data description
 
 plot UL_L and UL_A separately
+### Full 20 years
+![Unilever London](images/Unilever_London_raw.png)
+
+![Unilever Amsterdam](images/Unilever_Amsterdam_raw.png)
 
 write ARIMA model for UL_L and MAPE
 https://stats.stackexchange.com/questions/194453/interpreting-accuracy-results-for-an-arima-model-fit
