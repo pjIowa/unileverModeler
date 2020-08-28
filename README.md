@@ -2,8 +2,7 @@
 
 Unilever dual-listing existence, motivation for exercise, and data description
 
-plot UL_L and UL_A separately
-### Full 20 years
+### Common dates
 ![Unilever London](images/Unilever_London_raw.png)
 
 ![Unilever Amsterdam](images/Unilever_Amsterdam_raw.png)
