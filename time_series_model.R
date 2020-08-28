@@ -2,6 +2,33 @@ library(xts)
 library(forecast)
 library(rugarch)
 
+# load unilever stock price in Amsterdam
+dat=read.table("Unilever_AS.csv", header=TRUE, sep = ",")
+UL_A=xts(dat$Adj_Close, order.by=as.Date(dat$Date, format="%m/%d/%Y"))
+
+# load unilever stock price in London
+dat=read.table("Unilever_LSE.csv", header=TRUE, sep = ",")
+UL_L=xts(dat$Adj_Close, order.by=as.Date(dat$Date, format="%m/%d/%Y"))
+
+plot(UL_L, main="Unilever London")
+plot(UL_A, main="Unilever Amsterdam")
+
+# merge time series, keeping common dates
+UL = merge(UL_L,UL_A,join='inner')
+
+plot(UL)
+# https://stackoverflow.com/questions/6142944/how-can-i-plot-with-2-different-y-axes
+
+# log to remove exponential 
+# difference to remove autocorrelation
+r = diff(log(UL))[-1]
+
+
+
+
+
+
+
 # load unilever stock price in London
 dat=read.table("Unilever_LSE.csv", header=TRUE, sep = ",")
 UL_L=xts(dat$Adj_Close, order.by=as.Date(dat$Date, format="%m/%d/%Y"))
