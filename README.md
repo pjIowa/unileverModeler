@@ -3,9 +3,7 @@
 Unilever dual-listing existence, motivation for exercise, and data description
 
 ### Common dates
-![Unilever London](images/Unilever_London_raw.png)
-
-![Unilever Amsterdam](images/Unilever_Amsterdam_raw.png)
+![Unilever joint](images/Unilever_joint.png)
 
 write ARIMA model for UL_L and MAPE
 https://stats.stackexchange.com/questions/194453/interpreting-accuracy-results-for-an-arima-model-fit
