@@ -10,6 +10,9 @@ Unilever has had a dual listing in the UK and Netherlands since 1930. Since shar
 
 
 ### Model for UL_A using UL_L
+
+#### Full analysis documented in time_series_model.R
+
 y is the log returns of Unilever Amsterdam, x is the same for Unilever London
 
 y_t - .877035*x_t  = (1-.207383B)*a_t
