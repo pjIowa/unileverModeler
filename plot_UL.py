@@ -36,3 +36,12 @@ plt.plot(common_dates, UL_L_rebased, label="UL LSE")
 plt.ylabel('prices rebased from start, %')
 plt.legend(loc="upper left")
 plt.show()
+
+UL_A_log_ret = np.diff(np.log(UL_A_prices))
+UL_L_log_ret = np.diff(np.log(UL_L_prices))
+
+plt.plot(common_dates[1:], UL_A_log_ret, label="UL AS")
+plt.plot(common_dates[1:], UL_L_log_ret, label="UL LSE")
+plt.ylabel('log returns')
+plt.legend(loc="upper left")
+plt.show()
