@@ -8,8 +8,16 @@ Unilever has had a dual listing in the UK and Netherlands since 1930. Since shar
 ### Log returns of listings
 ![Unilever joint_log_returns](images/Unilever_joint_log_ret.png)
 
+
+### Model for UL_A using UL_L
+y is diff(log(UL AS)), x is diff(log(UL LSE))
+y_t - .877035*x_t  = (1-.207383B)*a_t
+a_t = sigma_t * eps_t
+eps_t ~ t_(df=5.255792,skew=1.035458)
+sigma_t^2 = .000003 + .162553*(a_(t-1))^2 + .313141*(sigma_(t-1))^2 
++ .217303*(sigma_(t-2))^2 + .086885*(sigma_(t-3))^2 + .174876*(sigma_(t-4))^2
+
 TODO
-write model for UL_A using UL_L
 calculate MAPE
 https://stats.stackexchange.com/questions/194453/interpreting-accuracy-results-for-an-arima-model-fit
 
