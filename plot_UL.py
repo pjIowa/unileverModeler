@@ -22,25 +22,14 @@ UL_L = get_price_dict("Unilever_LSE.csv")
 common_dates = list(UL_A.keys() & UL_L.keys())
 common_dates.sort()
 
-# print(len(UL_A))
-# print(len(UL_L))
-# print(len(common_dates))
-
 UL_A_prices = []
 UL_L_prices = []
 for common_date in common_dates:
 	UL_A_prices.append(UL_A[common_date])
 	UL_L_prices.append(UL_L[common_date])
 
-# print(len(UL_A_prices))
-# print(len(UL_L_prices))
-
 UL_A_rebased = np.array(UL_A_prices)/UL_A_prices[0]*100.0
 UL_L_rebased = np.array(UL_L_prices)/UL_L_prices[0]*100.0
-
-# y_ticks = np.arange(0, max(UL_A_prices), 2)
-# print(len(y_ticks))
-# plt.yticks(y_ticks)
 
 plt.plot(common_dates, UL_A_rebased, label="UL AS")
 plt.plot(common_dates, UL_L_rebased, label="UL LSE")
