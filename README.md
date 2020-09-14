@@ -2,8 +2,11 @@
 
 Unilever has had a dual listing in the UK and Netherlands since 1930. Since shareholders run the company as a single business, I want to validate whether the returns of the two stocks move in tandem. Graphs, stats, and discussion below. I was inspired to run this comparison after taking Financial Data Science (CFRM 502) in the University of Washington Computational Finance Program, taught by Professor Bahman Angoshtari, in Winter 2020.
 
-### Prices of each listing
+### Prices of listings
 ![Unilever joint](images/Unilever_joint.png)
+
+### Log returns of listings
+![Unilever joint_log_returns](images/Unilever_joint_log_ret.png)
 
 write model for UL_A using UL_L
 calculate MAPE
