@@ -14,8 +14,7 @@ y is diff(log(UL AS)), x is diff(log(UL LSE))
 y_t - .877035*x_t  = (1-.207383B)*a_t
 a_t = sigma_t * eps_t
 eps_t ~ t_(df=5.255792,skew=1.035458)
-sigma_t^2 = .000003 + .162553*(a_(t-1))^2 + .313141*(sigma_(t-1))^2 
-+ .217303*(sigma_(t-2))^2 + .086885*(sigma_(t-3))^2 + .174876*(sigma_(t-4))^2
+sigma_t^2 = .000003 + .162553*(a_(t-1))^2 + .313141*(sigma_(t-1))^2 + .217303*(sigma_(t-2))^2 + .086885*(sigma_(t-3))^2 + .174876*(sigma_(t-4))^2
 
 TODO
 calculate MAPE
