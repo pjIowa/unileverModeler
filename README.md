@@ -8,6 +8,7 @@ Unilever has had a dual listing in the UK and Netherlands since 1930. Since shar
 ### Log returns of listings
 ![Unilever joint_log_returns](images/Unilever_joint_log_ret.png)
 
+TODO
 write model for UL_A using UL_L
 calculate MAPE
 https://stats.stackexchange.com/questions/194453/interpreting-accuracy-results-for-an-arima-model-fit
