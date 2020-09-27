@@ -36,6 +36,8 @@ Akaike Information Criterion (AIC):	-7.1137
 
 Bayes Information Criterion (BIC):	-7.0952
 
+TODO convert the errors into a table
+
 #### Mean Prediction
 
 Mean Absolute Error (MAE):			.005701158
