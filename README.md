@@ -49,12 +49,17 @@ Adjusted close price is used for each stock. The prices for Unilever Amsterdam a
 ### Definitions
 
 [MAE](https://en.wikipedia.org/wiki/Mean_absolute_error)
+,
 [RMSE](https://en.wikipedia.org/wiki/Root-mean-square_deviation)
+,
 [Log Likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood)
+,
 [AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion)
+,
 [BIC](https://en.wikipedia.org/wiki/Bayesian_information_criterion)
 
 ### References
 
 [Formula Image Generator](https://www.codecogs.com/latex/eqneditor.php)
+,
 [Plotting ARIMA](https://cran.r-project.org/web/packages/qrmtools/vignettes/ARMA_GARCH_VaR.html)
