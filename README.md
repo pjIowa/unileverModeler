@@ -44,7 +44,7 @@ Root-mean-square error (RMSE):		.008212241
 
 #### Variance Prediction
 
-MAE:								.005701158
+MAE:								7.299417e-05
 
 RMSE:								.0002163114
 
