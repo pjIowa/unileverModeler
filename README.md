@@ -14,11 +14,11 @@ Unilever has had a dual listing in the UK and Netherlands since 1930. Since shar
 ![actual_vs_fitted](images/actual_vs_fitted.png)
 ![u_residuals](images/u_residuals.png)
 
+### Model
+
 TODO convert model to image
 
-### Parameterized Model
-
-y is log returns of UL AS, x is log returns of UL LSE, both based on pound prices
+y is log returns of UL AS, x is log returns of UL LSE, both based on prices in pounds
 
 (1-.086422B)(y_t - .936292*x_t)  = (1-.530315B)*a_t
 
@@ -28,18 +28,24 @@ eps_t ~ t_(df=5.810244,skew=1.060114)
 
 sigma_t^2 = .000002 + .203415*(a_(t-1))^2 + .356892*(sigma_(t-1))^2 + .295053*(sigma_(t-3))^2 + .102554*(sigma_(t-5))^2
 
-### Model Statistics
+#### Criteria
 
 Log Likelihood:						18973 
+
 Akaike Information Criterion (AIC):	-7.1137
+
 Bayes Information Criterion (BIC):	-7.0952
 
-Model Mean Prediction:
+#### Mean Prediction
+
 Mean Absolute Error (MAE):			.005701158
+
 Root-mean-square error (RMSE):		.008212241
 
-Model Variance Prediction:
+#### Variance Prediction
+
 MAE:								.005701158
+
 RMSE:								.0002163114
 
 ### Discussion
