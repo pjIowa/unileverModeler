@@ -24,6 +24,7 @@ eps_t ~ t_(df=5.810244,skew=1.060114)
 sigma_t^2 = .000002 + .203415*(a_(t-1))^2 + .356892*(sigma_(t-1))^2 + .295053*(sigma_(t-3))^2 + .102554*(sigma_(t-5))^2
 
 TODO
+
 calculate MAPE
 https://stats.stackexchange.com/questions/194453/interpreting-accuracy-results-for-an-arima-model-fit
 
