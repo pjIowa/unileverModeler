@@ -15,7 +15,7 @@ dat=read.table("EURGBP.csv", header=TRUE, sep = ",")
 EURGBP=xts(dat$Adj_Close, order.by=as.Date(dat$Date, format="%m/%d/%Y"))
 
 # get data for common dates across all three datasets
-common_dates = as.Date(Reduce(intersect, list(index(EURGBP),index(UL_A),index(UL_L))))
+common_dates = as.Date(Reduce(intersect, list(index(EURGBP), index(UL_A), index(UL_L))))
 UL_L = UL_L[common_dates]
 # convert unilever amsterdam stock price from eur to gbp
 UL_A = UL_A[common_dates]*EURGBP[common_dates]
@@ -30,7 +30,7 @@ r = diff(log(UL))[-1]
 # scatter plot to compare log returns
 x = as.numeric(r$UL_L)
 y = as.numeric(r$UL_A)
-plot(x,y,xlab="Unilever L", ylab="Unilever A", main="Scatter plot of log returns")
+plot(x, y, xlab="Unilever L", ylab="Unilever A", main="Scatter plot of log returns")
 # Meaning: 
 # As expected, there is strong correlation between the returns
 # of the dual-listed shares
@@ -243,3 +243,55 @@ plot(fit_d,which=9)
 # eps_t ~ t_(df=5.810244,skew=1.060114)
 # sigma_t^2 = .000002 + .203415*(a_(t-1))^2 + .356892*(sigma_(t-1))^2 
 # + .295053*(sigma_(t-3))^2 + .102554*(sigma_(t-5))^2
+
+e = residuals(fit_d)
+mean(abs(e))
+sqrt(sum(e^2)/length(e))
+
+# Result:
+# .005701158
+# .008212241
+# Meaning:
+# The first result is the mean absolute error, 
+# second result is root mean square error
+# for the mean prediction of the model
+
+e = residuals(fit_d)
+d = e^2 - sigma(fit_d)^2
+mean(abs(d))
+sqrt(sum(d^2)/length(d))
+
+# Result:
+# 7.299417e-05
+# .0002163114
+# Meaning:
+# The first result is the mean absolute error, 
+# second result is root mean square error
+# for the variance prediction of the model
+
+# plots log returns of UL AS vs predicted values from model
+mu_hat = fitted(fit_d)
+plt_dates = tail(common_dates,-1)
+plot(plt_dates
+	, y 
+	, type = "l" 
+	, xlab = "" 
+	, ylab = "log return of UL AS"
+	, main="Actual vs. fitted values")
+lines(plt_dates
+	, as.numeric(mu_hat) 
+	, col = adjustcolor("blue", alpha.f = 0.5))
+legend("bottomright"
+	, bty = "n"
+	, lty = c(1,1)
+	, col = c("black", adjustcolor("blue", alpha.f = 0.5))
+	, legend = c(expression(y[t]), expression(hat(mu)[t])))
+
+# plots unstandardized residuals
+resi = as.numeric(residuals(fit_d))
+plot(plt_dates 
+	, resi
+	, type = "l"
+	, xlab = ""
+	, ylab = ""
+	, main="Unstandardized residuals")
