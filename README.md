@@ -1,6 +1,6 @@
 # Unilever Time Series Analysis
 
-Unilever has had a dual listing in the UK and Netherlands since 1930. Since shareholders run the company as a single business, I want to validate whether the returns of the two stocks move in tandem. Graphs, stats, and discussion below. I was inspired to run this analysis after taking Financial Data Science (CFRM 502) in the University of Washington Computational Finance Program, taught by Professor Bahman Angoshtari, in Winter 2020.
+Unilever has had a dual listing in the UK and Netherlands since 1930. Since shareholders run the company as a single business, I want to validate whether the returns of the two stocks (UL in LSE, AS) move in tandem. Graphs, stats, and discussion below. I was inspired to run this analysis after taking Financial Data Science (CFRM 502) in the University of Washington Computational Finance Program, taught by Professor Bahman Angoshtari, in Winter 2020.
 
 ###### Code for next 2 plots in plot_UL.py
 ### Prices of listings
@@ -19,8 +19,11 @@ Unilever has had a dual listing in the UK and Netherlands since 1930. Since shar
 y is log returns of UL AS, x is log returns of UL LSE, both based on prices in pounds
 
 ![eq1](images/eq1.png)
+
 ![eq2](images/eq2.png)
+
 ![eq3](images/eq3.png)
+
 ![eq4](images/eq4.png)
 
 #### Criteria
@@ -31,19 +34,12 @@ Akaike Information Criterion (AIC):	-7.1137
 
 Bayes Information Criterion (BIC):	-7.0952
 
-TODO convert the errors into a table
+#### Prediction Errors
 
-#### Mean Prediction
-
-Mean Absolute Error (MAE):			.005701158
-
-Root-mean-square error (RMSE):		.008212241
-
-#### Variance Prediction
-
-MAE:								7.299417e-05
-
-RMSE:								.0002163114
+|                               | Mean Prediction | Variance Prediction |
+| ----------------------------- | --------------- | ------------------- |
+| Mean Absolute Error (MAE)     | .005701158      | 7.299417e-05        |
+| Root-mean-square error (RMSE  | .008212241      | .0002163114         |
 
 ### Discussion
 
