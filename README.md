@@ -9,7 +9,7 @@ Unilever has had a dual listing in the UK and Netherlands since 1930. Since shar
 ### Log returns of listings
 ![Unilever joint_log_returns](images/Unilever_joint_log_ret.png)
 
-###### Code for model and rest of plots in time_series_model.R
+###### Code for model, plots, and model statistics in time_series_model.R
 ### Model for UL_A using UL_L
 ![actual_vs_fitted](images/actual_vs_fitted.png)
 ![u_residuals](images/u_residuals.png)
