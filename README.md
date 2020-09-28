@@ -26,28 +26,25 @@ y is log returns of UL AS, x is log returns of UL LSE, both based on prices in p
 
 ![eq4](images/eq4.png)
 
-#### Criteria
+| Criteria                           |               |
+| ---------------------------------- | ------------- |
+| Log Likelihood                     | 18973         |
+| Akaike Information Criterion (AIC) | 	-7.1137      |
+| Bayes Information Criterion (BIC)) | -7.0952       |
 
-Log Likelihood:						18973 
 
-Akaike Information Criterion (AIC):	-7.1137
-
-Bayes Information Criterion (BIC):	-7.0952
-
-#### Prediction Errors
-
-|                               | Mean Prediction | Variance Prediction |
+| Prediction Errors             | Mean Prediction | Variance Prediction |
 | ----------------------------- | --------------- | ------------------- |
 | Mean Absolute Error (MAE)     | .005701158      | 7.299417e-05        |
 | Root-mean-square error (RMSE  | .008212241      | .0002163114         |
 
 ### Discussion
 
-I expected that mean returns are nearly the same and near constant volatility, since traders would take advantage of the arbitrage. However, differencies in the UK/EU laws, market participants, and currencies could create a discrepancy, especially with Brexit in 2016.
+I expected mean returns and variance would be nearly the same for the two assets, since traders would perform convergence trades. The model to predict UL AS from UL LSE wasn't able to predict many spikes, but had small residuals otherwise. The regression factor for UL LSE was 93.6%, which is significant. The remaining difference in returns could be because of exchange risk (£⟷€), market depth, or barriers for convergence trading.
 
 ### Data
 
-Adjusted close price is used for each stock. The prices for Unilever Amsterdam and London are from 5/10/1999 til 8/7/2020 inclusive.
+Adjusted close price is used for each stock. The prices for Unilever Amsterdam and London, and Euro to GBP exchange rates are from 5/10/1999 til 8/7/2020 inclusive. Data source is Yahoo Finance
 
 ### Definitions
 
