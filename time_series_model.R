@@ -245,29 +245,30 @@ plot(fit_d,which=9)
 # + .295053*(sigma_(t-3))^2 + .102554*(sigma_(t-5))^2
 
 e = residuals(fit_d)
+# Meaning: 
+# the residuals from mean prediction of model
+
 mean(abs(e))
 sqrt(sum(e^2)/length(e))
-
 # Result:
 # .005701158
 # .008212241
 # Meaning:
-# The first result is the mean absolute error, 
-# second result is root mean square error
-# for the mean prediction of the model
+# 1st result is mean absolute error, 
+# 2nd result is root mean square error
 
-e = residuals(fit_d)
 d = e^2 - sigma(fit_d)^2
+# Meaning: 
+# the residuals from variance prediction of model
+
 mean(abs(d))
 sqrt(sum(d^2)/length(d))
-
 # Result:
 # 7.299417e-05
 # .0002163114
 # Meaning:
-# The first result is the mean absolute error, 
-# second result is root mean square error
-# for the variance prediction of the model
+# 1st result is  mean absolute error, 
+# 2nd result is root mean square error
 
 # plots log returns of UL AS vs predicted values from model
 mu_hat = fitted(fit_d)
